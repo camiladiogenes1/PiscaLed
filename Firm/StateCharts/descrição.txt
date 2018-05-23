@@ -1,0 +1,10 @@
+O diagrama consiste em 5 estados válidos e um estado de erro. Do estado Inicia Votação existem três estados alcançáveis: Estado de Erro, Escolhe Refeição e Escolhe Qualidade.
+Existem 3 variáveis assosiadas ao estado Escolhe Refeição, uma para cada opção de refeição. Existem também 3 variáveis assossiadas ao estado Escolhe Qualidade, uma para cada opção de qualidade.
+Saindo do estado Inicia Votação para o estado Escolhe Refeição, as transições que levam ao estado Valida Voto estão assosiocadas a escolha de uma das três opções de qualidade.
+Saindo do estado Inicia Votação para o estado Escolhe Qualidade, as transições que levam ao estado Valida Voto estão assosiocadas a escolha de uma das três opções de refeição.
+Sempre que o fluxo de execução chegar ao estado Valida Voto é garantido que já foi opinada uma qualidade e um tipo de refeição.
+Nos estados Inicia Votação, Escolhe Qualidade e Escolhe Refeição, o evento de confirma voto leva ao estado de erro.
+Existem 3 transições de tempo. Do Estado de Erro de volta ao estado Inicia Votação existe um timer associado de 1 segundo.
+No estado Confirma, a informação referente ao voto é armazenada e após 1 segundo, uma transição para o estado Inicia Votação acontece.
+A transição entre o estado Valida Voto para o estado Confirma está associado a dois eventos: o primeiro evento é a leitura do botão pressConfirma, que realiza uma transição instantânea para o estado Confirma. O segundo evento é o estouro de um timer de 5 segundos.
+
