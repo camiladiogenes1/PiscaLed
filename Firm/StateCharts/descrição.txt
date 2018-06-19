@@ -8,3 +8,5 @@ Existem 3 transições de tempo. Do Estado de Erro de volta ao estado Inicia Vot
 No estado Confirma, a informação referente ao voto é armazenada e após 1 segundo, uma transição para o estado Inicia Votação acontece.
 A transição entre o estado Valida Voto para o estado Confirma está associado a dois eventos: o primeiro evento é a leitura do botão pressConfirma, que realiza uma transição instantânea para o estado Confirma. O segundo evento é o estouro de um timer de 5 segundos.
 
+atualizado para apresentação final
+
